@@ -13,7 +13,7 @@ public class LoginServiceImpl implements LoginService {
 
     public boolean login(String name, String password) {
         User user = userCache.get(name);
-            if (user ==null){
+            if (user == null){
                 return false;
             }
         return authenticator.auth(user, password);
